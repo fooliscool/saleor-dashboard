@@ -20,11 +20,9 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
   filename: "index.html",
   template: "./src/index.html"
 });
-
-
 const environmentPlugin = new webpack.EnvironmentPlugin({
   "APP_MOUNT_URI":"dashboard",
-  "API_URI":"http://90.0.0.178:8000/graphql/"
+  "API_URI":"http://90.0.0.178/graphql"
 });
 
 const dashboardBuildPath = "build/dashboard/";
@@ -61,7 +59,6 @@ module.exports = (env, argv) => {
       historyApiFallback: true,
       hot: true,
       port: 9000,
-      host:"90.0.0.178"
     },
     entry: {
       dashboard: "./src/index.tsx"

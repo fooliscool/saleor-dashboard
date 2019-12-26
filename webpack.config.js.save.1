@@ -1,3 +1,4 @@
+
 const CheckerPlugin = require("fork-ts-checker-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
@@ -24,7 +25,7 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
 
 const environmentPlugin = new webpack.EnvironmentPlugin({
   "APP_MOUNT_URI":"dashboard",
-  "API_URI":"http://90.0.0.178:8000/graphql/"
+  "API_URI":"http://90.0.0.178:8080/graphql"
 });
 
 const dashboardBuildPath = "build/dashboard/";
